@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: haven-empathetic-ai
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MODEL_NAME
+        value: gemma-2-9b-it
